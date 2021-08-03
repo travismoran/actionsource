@@ -1,0 +1,12 @@
+version: '3'
+services:
+  hlds:
+    image: unbalancedmind/actionsource
+    ports:
+      - "27000-27050:27000-27050/tcp"
+      - "27000-27050:27000-27050/udp"
+      - "1200:1200/udp"
+      - "26900:26900/udp"
+    volumes:
+      - "./config/server.cfg:/root/sourcesdk2k13/ahl2/cfg/server.cfg"
+

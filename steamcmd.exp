@@ -1,0 +1,7 @@
+#!/usr/bin/expect
+spawn -noecho apt -y install steamcmd
+expect "[More]\r" { send -- "\r" }
+expect "[More]\r" { send -- "\r" }
+expect "[More]\r" { send -- "\r" }
+expect "Do you agree to all terms of the Steam License Agreement?" { send -- "2\r" }
+interact
